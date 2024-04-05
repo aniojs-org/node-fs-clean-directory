@@ -14,7 +14,7 @@
     "@anio-fs/remove": "^4.0.3",
     "@anio-fs/scandir": "^4.2.1",
     "@vipen/target-js": "^0.17.0",
-    "vipen": "^0.2.1"
+    "vipen": "0.2.1"
   },
   "scripts": {
     "prepare": "./node_modules/.bin/vipen ."
