@@ -13,6 +13,8 @@ export default async function(dir_path, options = {}) {
 	}
 
 	await scandir(dir_path, {
+		reverse: true,
+
 		filter,
 
 		async callback(entry) {

@@ -13,6 +13,8 @@ export default function(dir_path, options = {}) {
 	}
 
 	scandirSync(dir_path, {
+		reverse: true,
+
 		filter,
 
 		callback(entry) {
