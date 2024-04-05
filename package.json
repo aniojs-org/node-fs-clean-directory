@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@anio-fs/remove": "^4.0.2",
-    "@anio-fs/scandir": "^4.1.0",
-    "@vipen/target-js": "^0.15.1",
+    "@anio-fs/scandir": "^4.2.0",
+    "@vipen/target-js": "^0.16.1",
     "vipen": "^0.2.1"
   },
   "scripts": {
