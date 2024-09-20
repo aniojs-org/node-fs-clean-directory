@@ -1,6 +1,6 @@
 {
   "name": "@anio-fs/clean",
-  "version": "1.1.4",
+  "version": "2.0.0",
   "description": "Clean a directory.",
   "main": "./dist/package.min.mjs",
   "typings": "./dist/index.d.ts",
