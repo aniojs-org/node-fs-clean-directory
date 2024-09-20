@@ -11,8 +11,8 @@
     "url": "git+https://github.com/anio-fs-org/clean.git"
   },
   "devDependencies": {
-    "@anio-fs/remove": "^4.0.3",
-    "@anio-fs/scandir": "^4.2.1",
+    "@anio-fs/remove": "^5.0.0",
+    "@anio-fs/scandir": "^5.0.1",
     "@vipen/target-js": "^0.17.0",
     "vipen": "0.2.1"
   },
