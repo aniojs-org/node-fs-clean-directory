@@ -1,4 +1,4 @@
-import {generateFromTemplate} from "vipen/autogenerate"
+import {generateFromTemplate} from "fourtune/autogenerate"
 
 const asyncToSync = {
 	"import {scandir} from \"@anio-fs/scandir\"": "import {scandirSync} from \"@anio-fs/scandir\"",
