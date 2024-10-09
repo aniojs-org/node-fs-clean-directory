@@ -5,6 +5,7 @@ export default {
 	type: "package",
 
 	autogenerate: {
-
+		"export/CleanOptionsType.d.mts": generateSyncAsyncVariant("template/CleanOptionsType.d.mts", "async"),
+		"export/CleanSyncOptionsType.d.mts": generateSyncAsyncVariant("template/CleanOptionsType.d.mts", "sync"),
 	}
 }
