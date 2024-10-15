@@ -1,6 +1,6 @@
 import type {ScandirEntryType} from "@anio-fs/scandir"
 
-interface PreserveType {
+type PreserveType = {
 	(entry : ScandirEntryType) : Promise<boolean>
 //	(entry : ScandirEntryType) : boolean
 }
