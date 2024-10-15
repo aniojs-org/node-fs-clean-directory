@@ -18,8 +18,8 @@
   "devDependencies": {
     "@anio-fs/remove": "^6.0.2",
     "@anio-fs/scandir": "^7.1.0",
-    "@fourtune/realm-js": "^0.17.1",
-    "fourtune": "^0.11.0"
+    "@fourtune/realm-js": "^0.26.0",
+    "fourtune": "^0.18.0"
   },
   "scripts": {
     "prepare": "./node_modules/.bin/fourtune ."
