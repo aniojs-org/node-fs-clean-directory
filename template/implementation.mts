@@ -62,7 +62,7 @@ export default async function(
 //	options? : CleanSyncOptionsType
 ) : ReturnType<ImplementationDocType> {
 
-		await cleanImplementation(context, dependencies, dir_path, options)
-//		cleanImplementation(context, dependencies, dir_path, options)
+	await cleanImplementation(context, dependencies, dir_path, options)
+//	cleanImplementation(context, dependencies, dir_path, options)
 
 }

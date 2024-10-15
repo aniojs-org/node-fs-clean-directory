@@ -50,6 +50,6 @@ export default function(
 	options? : CleanSyncOptionsType
 ) : ReturnType<ImplementationDocType> {
 
-		cleanImplementation(context, dependencies, dir_path, options)
+	cleanImplementation(context, dependencies, dir_path, options)
 
 }
