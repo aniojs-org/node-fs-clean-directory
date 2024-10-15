@@ -16,8 +16,8 @@
     "url": "git+https://github.com/anio-fs-org/clean.git"
   },
   "devDependencies": {
-    "@anio-fs/remove": "^6.0.2",
-    "@anio-fs/scandir": "^7.1.0",
+    "@anio-fs/remove": "^6.0.3",
+    "@anio-fs/scandir": "^7.1.4",
     "@fourtune/realm-js": "^0.26.0",
     "fourtune": "^0.18.0"
   },
