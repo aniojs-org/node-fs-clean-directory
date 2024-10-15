@@ -1,62 +1,26 @@
-import type {UsableContextType, FunctionTypeFromFactoryType, ContextInstanceType} from "@fourtune/realm-js"
-import {useContext } from "@fourtune/realm-js"
-import type {ScandirEntryType} from "@anio-fs/scandir"
+import type {UserContextType} from "@fourtune/realm-js"
+import {useContext} from "@fourtune/realm-js"
 
-import {scandirSyncFactory as scandirFactory} from "@anio-fs/scandir"
-import {removeSyncFactory as removeFactory} from "@anio-fs/remove"
+import type {DependenciesType} from "#/auto/DependenciesSyncType.d.mts"
 
-import {cleanSync as fn} from "./cleanSync.mts"
+import implementation from "#/auto/implementationSync.mts"
 
-import type {CleanSyncOptionsType} from "./CleanSyncOptionsType.d.mts"
+/* needed to make doctypes work in LSP */
+import type {ImplementationDocType} from "#/auto/ImplementationSyncDocType.d.mts"
 
-interface Dependencies {
-	scandir: FunctionTypeFromFactoryType<typeof scandirFactory>,
-	remove: FunctionTypeFromFactoryType<typeof removeFactory>
-}
+import {scandirSyncFactory} from "@anio-fs/scandir"
+import {removeSyncFactory} from "@anio-fs/remove"
 
-function cleanImplementation(
-	dir_path : string,
-	{
-		preserve = null
-	} : CleanSyncOptionsType = {},
-	context : ContextInstanceType,
-	dependencies : Dependencies
-) {
-	const {scandir, remove} = dependencies
+/* ImplementationDocType is needed to make doctypes work in LSP */
+export function cleanSyncFactory(user : UserContextType = {}) : ImplementationDocType {
+	const context = useContext(user)
 
-	context.log.trace(`cleaning "${dir_path}"`)
-
-	let filter = null
-
-	if (preserve) {
-		filter = (entry : ScandirEntryType) => {
-			const keep = preserve(entry)
-
-			return keep !== true
-		}
+	const dependencies : DependenciesType = {
+		scandir: scandirSyncFactory(user),
+		remove: removeSyncFactory(user),
 	}
 
-	scandir(dir_path, {
-		reverse: true,
-
-		filter,
-
-		callback(entry) {
-			remove(entry.absolute_path)
-		}
-	})
-}
-
-export function cleanSyncFactory(context_or_options : UsableContextType = {}) : typeof fn {
-
-	const context = useContext(context_or_options)
-
-	const dependencies : Dependencies = {
-		scandir: scandirFactory(context_or_options),
-		remove: removeFactory(context_or_options)
-	}
-
-	return function cleanSync(dir_path : string, options : CleanSyncOptionsType = {}) : ReturnType<typeof fn> {
-		cleanImplementation(dir_path, options, context, dependencies)
+	return function cleanSync(...args: Parameters<ImplementationDocType>) : ReturnType<ImplementationDocType> {
+		return implementation(context, dependencies, ...args)
 	}
 }

@@ -12,5 +12,9 @@
 		"paths": {
 			"#/*": ["./src/*"]
 		}
-	}
+	},
+	"exclude": [
+		"objects",
+		"build"
+	]
 }
