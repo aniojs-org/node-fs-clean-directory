@@ -1,12 +1,12 @@
-import {generateSyncAsyncVariant} from "fourtune/autogenerate"
+import {generateAsyncSyncVariant} from "fourtune/autogenerate"
 
 export default {
 	realm: "js",
 	type: "package:async/sync",
 
 	autogenerate: {
-		"export/CleanOptionsType.d.mts": generateSyncAsyncVariant("template/CleanOptionsType.d.mts", "async"),
-		"export/CleanSyncOptionsType.d.mts": generateSyncAsyncVariant("template/CleanOptionsType.d.mts", "sync"),
+		"export/CleanOptionsType.d.mts": generateAsyncSyncVariant("template/CleanOptionsType.d.mts", "async"),
+		"export/CleanSyncOptionsType.d.mts": generateAsyncSyncVariant("template/CleanOptionsType.d.mts", "sync"),
 	},
 
 	target: {
