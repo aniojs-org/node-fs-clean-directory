@@ -1,6 +1,6 @@
 /* define and describe your function api here */
-import type {CleanOptionsType} from "#/auto/export/CleanOptionsType.d.mts"
-//import type {CleanSyncOptionsType} from "#/auto/export/CleanSyncOptionsType.d.mts"
+import type {CleanOptions} from "#~auto/export/CleanOptions.d.mts"
+//import type {CleanSyncOptions} from "#~auto/export/CleanSyncOptions.d.mts"
 
 export type ImplementationDocType = {
 	/**
@@ -15,6 +15,6 @@ export type ImplementationDocType = {
 	 * @param dir_path The directory to be cleaned.
 	 * @param options Optional options.
 	 */
-       (dir_path : string, options? : CleanOptionsType) : Promise<void>
-//     (dir_path : string, options? : CleanSyncOptionsType) : void
+       (dir_path : string, options? : CleanOptions) : Promise<void>
+//     (dir_path : string, options? : CleanSyncOptions) : void
 }
