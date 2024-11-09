@@ -1,8 +1,8 @@
-import type {ScandirEntryType} from "@anio-fs/scandir"
+import type {ScandirEntry} from "@anio-fs/scandir"
 
-type PreserveType = {
-	(entry : ScandirEntryType) : Promise<boolean>
-//	(entry : ScandirEntryType) : boolean
+type Preserve = {
+	(entry : ScandirEntry) : Promise<boolean>
+//	(entry : ScandirEntry) : boolean
 }
 
 export type CleanOptions = {
@@ -10,5 +10,5 @@ export type CleanOptions = {
 	/**
 	 * @brief Function to determine whether to keep an entry or not.
 	 */
-	preserve? : PreserveType | null
+	preserve? : Preserve | null
 }
