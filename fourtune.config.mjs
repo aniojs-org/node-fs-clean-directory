@@ -5,8 +5,8 @@ export default {
 	type: "package:async/sync",
 
 	autogenerate: {
-		"export/CleanOptionsType.d.mts": generateAsyncSyncVariant("src/template/CleanOptionsType.d.mts", "async"),
-		"export/CleanSyncOptionsType.d.mts": generateAsyncSyncVariant("src/template/CleanOptionsType.d.mts", "sync"),
+		"export/CleanOptions.d.mts": generateAsyncSyncVariant("src/template/CleanOptions.d.mts", "async"),
+		"export/CleanSyncOptions.d.mts": generateAsyncSyncVariant("src/template/CleanOptions.d.mts", "sync"),
 	},
 
 	target: {

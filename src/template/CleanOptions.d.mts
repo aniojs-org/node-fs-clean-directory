@@ -5,8 +5,8 @@ type PreserveType = {
 //	(entry : ScandirEntryType) : boolean
 }
 
-export type CleanOptionsType = {
-//export type CleanSyncOptionsType = {
+export type CleanOptions = {
+//export type CleanSyncOptions = {
 	/**
 	 * @brief Function to determine whether to keep an entry or not.
 	 */
