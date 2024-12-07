@@ -1,7 +1,7 @@
 {
   "name": "@anio-fs/clean",
   "type": "module",
-  "version": "4.0.0",
+  "version": "0.0.0",
   "description": "Clean a directory.",
   "exports": {
     ".": {
