@@ -1,16 +1,16 @@
-# @anio-fs/clean
+# @aniojs/node-fs-clean-directory
 
 Clean a directory.
 
 ```js
-import {clean, cleanSync} from "@anio-fs/clean"
+import {cleanDirectory, cleanDirectorySync} from "@aniojs/node-fs-clean-directory"
 
-await clean("./dir/")
+await cleanDirectory("./dir/")
 
 //
 // delete everything except root .gitkeep file
 //
-await clean("./dir/", {
+await cleanDirectory("./dir/", {
 	preserve(entry) {
 		return entry.relative_path === ".gitkeep"
 	}

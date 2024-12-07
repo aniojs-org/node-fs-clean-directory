@@ -1,5 +1,5 @@
 {
-  "name": "@anio-fs/clean",
+  "name": "@aniojs/node-fs-clean-directory",
   "type": "module",
   "version": "0.0.0",
   "description": "Clean a directory.",
@@ -13,7 +13,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anio-fs-org/clean.git"
+    "url": "git+https://github.com/aniojs-org/node-fs-clean-directory.git"
   },
   "devDependencies": {
     "@aniojs/node-fs-remove": "^0.1.1",
