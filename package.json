@@ -1,7 +1,7 @@
 {
   "name": "@aniojs/node-fs-clean-directory",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Clean a directory.",
   "exports": {
     ".": {
