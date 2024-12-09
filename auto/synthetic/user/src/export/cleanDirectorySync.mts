@@ -19,6 +19,6 @@ const fn = factory(createContext())
  * @param dir_path The directory to be cleaned.
  * @param options Optional options.
  */
-export function cleanDirectorySync(input_path: string, options: Options) : undefined {
+export function cleanDirectorySync(input_path: string, options?: Options) : undefined {
 	return fn(input_path, options)
 }

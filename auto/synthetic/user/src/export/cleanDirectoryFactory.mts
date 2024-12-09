@@ -25,7 +25,7 @@ import type {ScandirEntry} from "@aniojs/node-fs-scandir"
  */
 declare function cleanDirectory(
 	input_path: string,
-	options: Options
+	options?: Options
 ) : Promise<undefined>
 
 /**
@@ -57,7 +57,7 @@ export function cleanDirectoryFactory(context: RuntimeWrappedContextInstance) : 
 		}
 	}
 
-	return async function cleanDirectory(input_path: string, options: Options) : Promise<undefined> {
+	return async function cleanDirectory(input_path: string, options?: Options) : Promise<undefined> {
 		return await implementation(local_context, dependencies, input_path, options)
 	}
 }

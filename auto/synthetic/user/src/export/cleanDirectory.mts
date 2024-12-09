@@ -20,6 +20,6 @@ const fn = factory(createContext())
  * @param dir_path The directory to be cleaned.
  * @param options Optional options.
  */
-export async function cleanDirectory(input_path: string, options: Options) : Promise<undefined> {
+export async function cleanDirectory(input_path: string, options?: Options) : Promise<undefined> {
 	return await fn(input_path, options)
 }

@@ -24,7 +24,7 @@ import type {ScandirEntry} from "@aniojs/node-fs-scandir"
  */
 declare function cleanDirectorySync(
 	input_path: string,
-	options: Options
+	options?: Options
 ) : undefined
 
 /**
@@ -56,7 +56,7 @@ export function cleanDirectorySyncFactory(context: RuntimeWrappedContextInstance
 		}
 	}
 
-	return function cleanDirectorySync(input_path: string, options: Options) : undefined {
+	return function cleanDirectorySync(input_path: string, options?: Options) : undefined {
 		return implementation(local_context, dependencies, input_path, options)
 	}
 }
