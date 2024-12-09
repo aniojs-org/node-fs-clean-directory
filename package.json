@@ -1,20 +1,20 @@
 {
   "name": "@aniojs/node-fs-clean-directory",
-  "type": "module",
   "version": "0.1.0",
+  "author": "Anio Software <info@anio.software>",
   "description": "Clean a directory.",
+  "license": "MIT",
   "exports": {
     ".": {
       "types": "./dist/default/index.min.d.mts",
       "import": "./dist/default/index.min.mjs"
     }
   },
-  "author": "Anio Software <info@anio.software>",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aniojs-org/node-fs-clean-directory.git"
   },
+  "type": "module",
   "devDependencies": {
     "@aniojs/node-fs-remove": "^0.1.1",
     "@aniojs/node-fs-scandir": "^0.1.1",
