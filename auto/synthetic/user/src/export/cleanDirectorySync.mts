@@ -7,8 +7,6 @@ import type {ScandirEntry} from "@aniojs/node-fs-scandir"
 
 import {cleanDirectorySyncFactory as factory} from "#~synthetic/user/export/cleanDirectorySyncFactory.mts"
 
-let __fnImplementation: any = null
-
 /**
  * @brief Synchronously clean a directory.
  * @description
@@ -20,7 +18,7 @@ let __fnImplementation: any = null
  * @param options Optional options.
  */
 export function cleanDirectorySync(input_path: string, options?: Options) : undefined {
-	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+	const __fnImplementation = factory(createContext())
 
 	return __fnImplementation(input_path, options)
 }
